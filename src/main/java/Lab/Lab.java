@@ -5,6 +5,7 @@ import Lab.Beans.GasEngine;
 import Lab.Beans.NuclearEngine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -28,14 +29,16 @@ public class Lab {
      * TODO: Retrieve an GasEngine bean and return it.
      * @return a GasEngine bean
      */
+    @Bean
     public GasEngine getGasPoweredBean(){
-        return null;
+        return new GasEngine();
     }
     /**
      * TODO: Retrieve a NuclearEngine bean and return it.
      * @return a NuclearEngine bean
      */
+    @Bean
     public NuclearEngine getNuclearPoweredBean(){
-        return null;
+        return new NuclearEngine();
     }
 }
